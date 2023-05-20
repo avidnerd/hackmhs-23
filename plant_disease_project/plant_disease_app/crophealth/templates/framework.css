@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+
 body {
     font-family: Montserrat;
 }
 
-#header {
+
+.header {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,61 +17,91 @@ body {
     top: 0;
     text-align: left;
     padding-left: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
-#title {
+
+.header_text {
+    font-size: 3vh;
+    padding: 1vh;
+    color: white;
+    text-decoration: none;
+}
+
+
+.title {
     text-align: center;
     background-color: green;
     color: white;
     padding-top: 1vh;
     padding-bottom: 1vh;
+    font-size: 10vh;
 }
 
-#about_section {
+
+.body_section_1 {
     padding-top: 1vh;
     padding-bottom: 1vh;
     background-color: palegoldenrod;
     color: black;
-    display: flex;
-    flex-direction: row;
 }
 
-#about_text {
+
+.body_section_1_text {
     padding: 3vh;
     background-color: transparent;
 }
+
 
 #about_image_section {
     padding: 3vh;
     background-color: transparent;
 }
 
+
 #about_image {
     width: 60vh;
 }
 
-#upload_section {
+
+.body_section_2 {
     padding-top: 1vh;
     padding-bottom: 1vh;
-    background-color: palegoldenrod;
+    background-color: yellowgreen;
     color: black;
 }
+
 
 #upload_text {
     padding: 3vh;
     background-color: transparent;
 }
 
-a {
-    color: blue;
+
+.caption {
+    font-size: 2vh;
+    text-align: center;
 }
 
-a:hover {
-    color: purple;
+
+.link {
+    padding: 3vh;
+    color: green;
+    font-size: 5vh;
 }
+
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+
 
 
 /* button code */
+
 
 /* Radial In */
 .hvr-radial-in {
@@ -109,46 +141,6 @@ a:hover {
     color: white;
   }
   .hvr-radial-in:hover:before, .hvr-radial-in:focus:before, .hvr-radial-in:active:before {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  
-  /* Rectangle In */
-  .hvr-rectangle-in {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    background: #2098D1;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-  }
-  .hvr-rectangle-in:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #e1e1e1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
-  .hvr-rectangle-in:hover, .hvr-rectangle-in:focus, .hvr-rectangle-in:active {
-    color: white;
-  }
-  .hvr-rectangle-in:hover:before, .hvr-rectangle-in:focus:before, .hvr-rectangle-in:active:before {
     -webkit-transform: scale(0);
     transform: scale(0);
   }
