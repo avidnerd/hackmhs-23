@@ -1,26 +1,41 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset= "UTF-8">
-        <title>Indentifation tool for spotting diseases in plants and crops</title>
-        <h1>Indentifation tool for spotting diseases in plants and crops</h1>
-        <link rel="stylesheet" href="css/framework.css">
-        <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/media-queries.css">
-        <meta name="viewport" content="width=device-width">
-      </head>
-    <body>
-        <p>About the software</p>
-        <p>The intent of this software was to improve the sustainability of crops by allowing farmers to be able to indetify disease or malnourishments in their plants and crops. By using image recognition software, we  hope to decrease the number of crops lost to harmful diseases and infestations, and hope to help large farmers and small gardeners alike to protect their plants.</p>
-        <p>Click on the "Choose File" button to upload your images:</p>
-        <form action="/action_page.php" enctype="multipart/form-data">
-                <label for="myfile">Select a file:</label>
-                <input type="file" id="myfile" name="myfile" multiple="multiple"/>
-                <br /><br />
-                <input type="submit" />
-                <br /><br />
-        </form>
-        <a href="results.html" class="nav-homes">Click here for results</a>
-    </body>
-</html>
+<head>
+    <meta charset= "UTF-8">
+    <title> The Plant Doctor </title>
+    <link rel="stylesheet" href="framework.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div id="header">
+        <p> The Plant Doctor </p>
+    </div>
+
+    <div id="title">
+        <h1 class="title_text"> The Plant Doctor </h1>
+    </div>
+
+    <div id="about_section">
+        <div id="about_text">
+            <p>About the software</p>
+            <p>The intent of this software was to improve the sustainability of crops by allowing farmers to be able to indetify disease or malnourishments in their plants and crops. By using image recognition software, we  hope to decrease the number of crops lost to harmful diseases and infestations, and hope to help large farmers and small gardeners alike to protect their plants.</p>
+            <img src="https://cdn.britannica.com/89/126689-004-D622CD2F/Potato-leaf-blight.jpg">
+        </div>
+    </div>
+
+    <div id="upload_section">
+        <div id="upload_text">
+            <p>Click on the "Choose File" button to upload your images:</p>
+            <form action="/action_page.php" enctype="multipart/form-data">
+                    <label for="myfile">Select a file:</label>
+                    <input type="file" id="myfile" name="myfile" multiple="multiple"/>
+                    <br /><br />
+                    <input type="submit" />
+                    <br /><br />
+            </form>
+            <a href="results.html" class="nav-homes">Click here for results</a>
+        </div>
+    </div>
+</body>
