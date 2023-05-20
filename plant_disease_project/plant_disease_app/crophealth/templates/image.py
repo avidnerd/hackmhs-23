@@ -2,20 +2,35 @@ from flask import Flask, render_template, request
 import os
 import requests
 from googlesearch import search
+import tensorflow as tf
+from tensorflow import keras
+from keras.models import Sequential
+from keras.applications.vgg16 import VGG16
+from keras.layers import Dense
+from keras.preprocessing import image
+from keras.applications.vgg16 import preprocess_input
+import numpy as np
 
 app = Flask(__name__)
 snippet = ""
 disease_name = ""
 
-@app.route('/process', methods=['POST'])
+@app.route('/process', methods=['GET', 'POST'])
 def process():
     plant_image = request.files['plantImage']
     image_path = 'uploads/' + plant_image.filename
     plant_image.save(image_path)
+    image = plant_image.img_to_array(plant_image)
+    image = np.expand_dims(image, axis=0)
+    
+model = VGG16(weights=None, include_top=False, input_shape=(224, 224, 3))
+fin_model = Sequential()
+fin_model.add(model)
+fin_model.add(Dense(39, activation='softmax'))
+fin_model.load_weights('/plant_disease_project/plant_disease_app/crophealth/cnn_model/plant_doctor_model_weights.h5')
+imge = image.
 
-#RUN SOFTWARE HERE
-#VOID IF NO DISEASE IS FOUND
-disease_name="apple black rot"
+disease_name=
 
 def search_plant_disease(disease):
     query = f"{disease} plant disease care tips"
